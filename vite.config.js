@@ -18,6 +18,6 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 3000
     },
-    base: env.NODE_ENV === 'production' ? '/sa-assignment/' : '/'
+    base: env.NODE_ENV === 'production' ? '/github-repo-list/' : '/'
   }
 })
