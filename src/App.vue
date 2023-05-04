@@ -2,10 +2,12 @@
   <main>
     <h2>🦊 Reg Chiu's repo list:</h2>
     <div class="repo-list">
-      <AppCard v-for="repo in repos" :key="repo.id" class="app-card">
-        <h4>{{ repo.name }}</h4>
-        <p>{{ repo.description || '-' }}</p>
-        <a :href="repo.html_url" target="_blank" rel="noopener noreferrer">{{ repo.html_url }}</a>
+      <AppCard v-for="repo in repos" :key="repo.id">
+        <h1 class="break-all">{{ repo.name }}</h1>
+        <p class="break-all">{{ repo.description || '-' }}</p>
+        <a class="break-all" :href="repo.html_url" target="_blank" rel="noopener noreferrer">{{
+          repo.html_url
+        }}</a>
       </AppCard>
       <div v-show="isShowLoadMore">Load more...</div>
     </div>
@@ -72,5 +74,9 @@ getUserRepos()
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.break-all {
+  word-break: break-all;
 }
 </style>
